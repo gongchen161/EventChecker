@@ -1,0 +1,28 @@
+header {
+  color: red;
+}
+
+nav {
+  color: orange;
+}
+
+main {
+  color: blue;
+}
+
+footer {
+  color: yellow;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid  green;
+}
+
+li.expanded {
+  background-color: #eaefc6;
+  color: red;
+}

@@ -1,0 +1,29 @@
+<h2>{{ message }}</h2>
+
+<div>
+
+
+  <div>
+    <h3>Add Event</h3>
+    <p>Enter a event name</p>
+    <form name="eventform" ng-submit="addEvent()" novalidate>
+        <input type="text" name="eventname" placeholder="Eventn name" ng-model="eventname" ng-required="true">
+      <button type="submit" ng-disabled="eventform.$invalid">+</button>
+    </form>
+  </div>
+
+
+  <div>
+  <h3>Your Events</h3>
+  <div ng-repeat="(key, event) in events">
+    <button ng-click="deleteEvent(key)">Delete this event</button>
+
+    <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}"><span>Check In</span></a>
+    <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}/checkinlist"><span>View Checkins</span></a>
+
+    <span>{{event.name}}</span>
+
+  </div><!-- meetings list -->
+
+
+</div>

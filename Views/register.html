@@ -1,0 +1,24 @@
+<div class="register">
+  <h2 ng-show="message">{{ message }}</h2>
+
+  <form name="registerform" ng-submit="register()" novalidate >
+    <fieldset>
+      <input type="firstname" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true">
+      <p class="error" ng-show="registerform.firstname.$invalid && registerform.firstname.$touched">
+      Not a valid first name</p>
+      <input type="lastname" name="lastname" placeholder="Last Name" ng-model="user.lastname" ng-required="true">
+      <p class="error" ng-show="registerform.lastname.$invalid && registerform.lastname.$touched">
+      Not a valid last name</p>
+      <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+      <p class="error" ng-show="registerform.email.$invalid && registerform.email.$touched">
+      Not a valid email</p>
+      <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+      <p class="error" ng-show="registerform.password.$invalid && registerform.password.$touched">
+      Not a valid password</p>
+    </fieldset>
+
+    <button type="submit" class="btn" ng-disabled="registerform.$invalid">Register</button>
+    <p>or <a ng-href="#/login">login</a></p>
+
+  </form>
+</div>

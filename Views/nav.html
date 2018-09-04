@@ -1,0 +1,7 @@
+<div><a ng-href='#/'>Event Checker</a></div>
+<ul>
+  <li><a ng-show="currentUser" ng-href="#/event">Events:
+      <span ng-show="numEvents">{{ numEvents}}</span></a></li>
+  <li><a ng-hide="currentUser" ng-href='#/login'>Log In</li>
+  <li><a ng-hide="currentUser" ng-href='#/register'>Register</li>
+</ul>
