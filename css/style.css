@@ -1,17 +1,98 @@
-header {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  margin: 50px;
+  font-size: 20px;
+}
+
+.hello {
+  margin: 50px;
+  font-size: 20px;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #ffcc66;
+  color: white;
+}
+
+#num {
   color: red;
 }
 
-nav {
-  color: orange;
+input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  height: 40px;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.logo {
+  font-size: 25px;
+  float: left;
+}
+
+.menu {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 25px;
+  float:right;
+}
+
+.menu a{
+  text-decoration: none;
 }
 
 main {
-  color: blue;
+  margin:50px;
 }
 
-footer {
-  color: yellow;
+.logreg {
+  width: 80%;
+  text-align: center;
+}
+
+.logreg button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+}
+
+.logreg button:hover{
+    background-color: green;
+}
+
+.logreg button:disabled{
+    background-color: gray;
+}
+
+.myEvent {
+  margin-top: 20px;
+  width: 80%;
+  text-align: center;
 }
 
 input.ng-invalid.ng-touched {
@@ -23,6 +104,6 @@ input.ng-valid.ng-touched {
 }
 
 li.expanded {
-  background-color: #eaefc6;
+  background-color: #EAEFC6;
   color: red;
 }

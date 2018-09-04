@@ -33,21 +33,17 @@
 
 <body>
   <header>
-    <h1> Welcome</h1>
+    <div><a class ="logo" ng-href='#/'>eChecker</a></div>
     <nav ng-include="'views/nav.html'"></nav>
   </header>
 
   <div ng-show="currentUser" ng-controller="RegistrationController">
-    <span>Hello {{currentUser.firstname}}</span>
+    <span class="hello">Hello {{currentUser.firstname}}</span>
     <a ng-href="#/login" ng-click="logout()">logout</a>
   </div>
 
   <main ng-view>
   </main>
-
-  <footer>
-    <p>Footer</p>
-  </footer>
 
 </body>
 

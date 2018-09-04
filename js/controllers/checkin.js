@@ -3,7 +3,6 @@ app.controller('CheckInController',
   function($scope, $rootScope, $location, $routeParams, $firebaseObject, $firebaseArray) {
 
 
-
     var ref = firebase.database().ref().child($routeParams.uid)
       .child('events').child($routeParams.eid).child('checkins');
 
@@ -23,7 +22,6 @@ app.controller('CheckInController',
       } else {
        checkin.expand = 'expanded';
       }
-
     }
 
     $scope.publishNote = function(checkin) {
@@ -55,5 +53,7 @@ app.controller('CheckInController',
     $scope.deleteCheckIn = function(id) {
       $firebaseObject(ref.child(id)).$remove();
     }
+
+
 
 }]);

@@ -1,5 +1,5 @@
-<div class="login">
-  <h2 class="message" ng-show="message">{{ message }}</h2>
+<h2 class="message" ng-show="message">{{ message }}</h2>
+<div class="logreg">
   <form name="loginform" ng-submit="login()" novalidate>
     <fieldset>
       <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
@@ -8,9 +8,7 @@
       <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
       <p class="error" ng-show="loginform.password.$invalid && loginform.password.$touched">
       Not a valid password</p>
+      <button type="submit" class="btn" ng-disabled="loginform.$invalid">Login</button>
     </fieldset>
-
-    <button type="submit" class="btn" ng-disabled="loginform.$invalid">Login</button>
-    <p>or <a ng-href="#/register">register</a></p>
   </form>
 </div>

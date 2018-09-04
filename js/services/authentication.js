@@ -23,6 +23,7 @@ app.factory('Authentication', ['$rootScope', '$location', '$firebaseObject', '$f
         user.email,
         user.password
       ).then(function(user) {
+        $rootScope.currentUser = '';
         $location.path('/event');
       }).catch(function(err) {
         $rootScope.message = err.message;
@@ -30,6 +31,7 @@ app.factory('Authentication', ['$rootScope', '$location', '$firebaseObject', '$f
     },
 
     logout: function() {
+      $rootScope.currentUser = '';
       return auth.$signOut();
     },
 
