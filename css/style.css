@@ -13,6 +13,9 @@ body {
   font-size: 20px;
 }
 
+h1 {
+  text-align: center;
+}
 
 a{
   text-decoration: none;
@@ -63,12 +66,12 @@ main {
   margin:50px;
 }
 
-.logreg {
+.myform {
   width: 80%;
   text-align: center;
 }
 
-.logreg button {
+.myform button {
     background-color: blue;
     border: none;
     color: white;
@@ -81,11 +84,38 @@ main {
     float: right;
 }
 
-.logreg button:hover{
+.myform button:hover{
     background-color: green;
 }
 
-.logreg button:disabled{
+.myform button:disabled{
+    background-color: gray;
+}
+
+.addEvent {
+  margin-top: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.addEvent button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+}
+
+.addEvent button:hover{
+    background-color: green;
+}
+
+.addEvent button:disabled{
     background-color: gray;
 }
 
@@ -93,6 +123,29 @@ main {
   margin-top: 20px;
   width: 80%;
   text-align: center;
+}
+
+.myEvent a {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: right;
+}
+
+.myEvent a:hover{
+    background-color: green;
+}
+
+.myEvent p {
+    padding: 0;
+    color: white;
+    margin: 0;
 }
 
 input.ng-invalid.ng-touched {
@@ -104,6 +157,57 @@ input.ng-valid.ng-touched {
 }
 
 li.expanded {
-  background-color: #EAEFC6;
   color: red;
+}
+
+.eventname {
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    float: left;
+}
+
+.eventls a {
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    float: right;
+}
+
+.selection {
+    margin:0;
+    float: left;
+    padding: 1px;
+    margin: 1px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.info {
+  margin: 5px;
+  padding: 5px;
+}
+
+.info p{
+  margin: 0;
+  padding: 0;
+}
+
+.info button{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+}
+
+.info button:hover{
+    background-color: green;
 }

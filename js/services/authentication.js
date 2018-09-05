@@ -19,19 +19,24 @@ app.factory('Authentication', ['$rootScope', '$location', '$firebaseObject', '$f
   obj = {
 
     login: function(user) {
-      auth.$signInWithEmailAndPassword(
-        user.email,
-        user.password
-      ).then(function(user) {
-        $rootScope.currentUser = '';
+      $rootScope.message = '';
+      if ($rootScope.currentUser) {
         $location.path('/event');
-      }).catch(function(err) {
-        $rootScope.message = err.message;
-      });
+      } else{
+        auth.$signInWithEmailAndPassword(
+          user.email,
+          user.password
+        ).then(function(user) {
+          $location.path('/event');
+        }).catch(function(err) {
+          $rootScope.message = err.message;
+        });
+      }
     },
 
     logout: function() {
       $rootScope.currentUser = '';
+      $rootScope.message = 'You have succesfully logged out';
       return auth.$signOut();
     },
 
@@ -40,6 +45,7 @@ app.factory('Authentication', ['$rootScope', '$location', '$firebaseObject', '$f
     },
 
     register: function(user) {
+      $rootScope.message = '';
       auth.$createUserWithEmailAndPassword(user.email, user.password).
         then(function(regUser) {
 

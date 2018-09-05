@@ -1,6 +1,8 @@
 <div class="menu">
-  <a ng-show="currentUser" ng-href="#/event">YourEvent:
-      <span id="num" ng-show="numEvents">{{numEvents}}</span></a>
+  <a ng-show="currentUser" ng-href="#/event">{{currentUser.firstname}} :
+    <span id="num" ng-show="numEvents">{{numEvents}}</span></a>
+
+  <a ng-controller="RegistrationController" ng-show="currentUser" ng-href="#/login" ng-click="logout()">logout</a>
   <a ng-hide="currentUser" ng-href='#/login'>Log In</a>
   <a ng-hide="currentUser" ng-href='#/register'>Register</a>
 </div>

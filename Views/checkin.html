@@ -1,7 +1,7 @@
 <h2 class="message" ng-show="message">{{ message }}</h2>
-<div class="checkin">
+<div class="myform">
 
-  <h2>Check In</h2>
+  <h1>Check In</h1>
   <form name="checkinform" ng-submit="addCheckIn()" novalidate >
     <fieldset>
       <input type="firstname" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true">
@@ -13,9 +13,8 @@
       <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
       <p class="error" ng-show="checkinform.email.$invalid && checkinform.email.$touched">
       Not a valid email</p>
+      <button type="submit" ng-disabled="checkinform.$invalid">Check In</button>
     </fieldset>
-
-    <button type="submit" ng-disabled="checkinform.$invalid">Check In</button>
 
   </form>
 </div>

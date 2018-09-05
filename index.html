@@ -33,14 +33,9 @@
 
 <body>
   <header>
-    <div><a class ="logo" ng-href='#/'>eChecker</a></div>
+    <div><a class ="logo" ng-href='#/event'>eChecker</a></div>
     <nav ng-include="'views/nav.html'"></nav>
   </header>
-
-  <div ng-show="currentUser" ng-controller="RegistrationController">
-    <span class="hello">Hello {{currentUser.firstname}}</span>
-    <a ng-href="#/login" ng-click="logout()">logout</a>
-  </div>
 
   <main ng-view>
   </main>

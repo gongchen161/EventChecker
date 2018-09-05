@@ -1,7 +1,7 @@
 <h2 class="message" ng-show="message">{{ message }}</h2>
 
 <div>
-  <fieldset class = "logreg">
+  <fieldset class = "addEvent">
     <form name="eventform" ng-submit="addEvent()" novalidate>
         <input type="text" name="eventname" placeholder="Add an Event" ng-model="eventname" ng-required="true">
       <button type="submit" ng-disabled="eventform.$invalid">Add</button>
@@ -10,15 +10,14 @@
 
   <fieldset class = "myEvent">
   <h3>My Events</h3>
-  <div ng-repeat="(key, event) in events">
-    <button ng-click="deleteEvent(key)">Delete this event</button>
+    <fieldset class="eventls" ng-repeat="(key, event) in events">
+      <span class="eventname">{{event.name}}</span>
+      <a ng-href="#/event" class="delevent" ng-click="deleteEvent(key)"><p>Delete</p></a>
 
-    <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}"><span>Check In</span></a>
-    <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}/checkinlist"><span>View Checkins</span></a>
-
-    <span>{{event.name}}</span>
-
-  <fieldset>
+      <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}"><p>Check In</p></a>
+      <a ng-href="#/checkin/{{currentUser.$id}}/{{event.$id}}/checkinlist"><p>View Checkins</p></a>
+    </fieldset>
+  </fieldset>
 
 
 </div>
