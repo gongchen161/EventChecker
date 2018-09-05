@@ -3,6 +3,12 @@ body {
   padding: 0;
 }
 
+.head {
+  background-color: #86b5e0;
+  height: 36px;
+  overflow: hidden;
+}
+
 .message {
   margin: 50px;
   font-size: 20px;
@@ -26,9 +32,11 @@ a{
 }
 
 a:hover {
-  background-color: #ffcc66;
+  background-color: #4496e2;
   color: white;
 }
+
+
 
 #num {
   color: red;
@@ -51,15 +59,24 @@ header {
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 35px;
   float: left;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .menu {
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 25px;
+  font-size: 32px;
   float:right;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .menu a{
