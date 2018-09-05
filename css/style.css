@@ -13,6 +13,10 @@ body {
   font-size: 20px;
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   text-align: center;
 }
@@ -178,13 +182,16 @@ li.expanded {
 }
 
 .selection {
-    margin:0;
-    float: left;
-    padding: 1px;
-    margin: 1px;
-    display: inline-block;
-    overflow: hidden;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
 }
+.ckshow {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
 
 .info {
   margin: 5px;
@@ -209,5 +216,23 @@ li.expanded {
 }
 
 .info button:hover{
+    background-color: green;
+}
+
+.ckmain {
+  width: 80%;
+}
+.backcheckin button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.backcheckin button:hover{
     background-color: green;
 }

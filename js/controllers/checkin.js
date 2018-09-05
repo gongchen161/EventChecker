@@ -32,6 +32,10 @@ app.controller('CheckInController',
       })
     }
 
+    $scope.backToCheckIn = function() {
+      $location.path('/checkin/' + $routeParams.uid + '/' + $routeParams.eid);
+    }
+
     $scope.deleteNote = function(checkin, id) {
 
       var note = ref.child(checkin.$id).child('notes').child(id);

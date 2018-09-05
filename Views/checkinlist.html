@@ -1,53 +1,54 @@
-<div>
-  <h1>Check-ins</h1>
-
-  <fieldset>
-    <input type="text" ng-model="query" placeholder="Search checkins">
-
-  <div class="selection">
-    <span class="label">Sort by:</span>
-     <select ng-model="order">
-      <option value="date">Date</option>
-       <option value="firstname">First Name</option>
-       <option value="lastname">Last Name</option>
-     </select>
+<div >
+  <div class="backcheckin">
+    <button ng-click="backToCheckIn()">Add Another Check In</button>
   </div>
 
-  </fieldset>
+  <div class="checkinmain">
+    <fieldset class="selection">
+      <input type="text" ng-model="query" placeholder="Search checkins">
 
-  <div>
+      <div>
+        <span class="label">Sort by:</span>
+        <select ng-model="order">
+          <option value="date">Date</option>
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
+        </select>
+      </div>
+    </fieldset>
 
-  <ul>
-    <li ng-class="checkin.expand" ng-repeat= "checkin in checkins | orderBy: order:direction | filter: query">
-        <fieldset class="info">
-          <p>Name: <b>{{checkin.firstname}} {{checkin.lastname}}</b></p>
-          <p>Check-in Time: <b>{{checkin.date | date: "MMM d,yy h:mm a"}}</b></p>
+    <div class="ckshow">
+      <ul>
+        <li ng-class="checkin.expand" ng-repeat= "checkin in checkins | orderBy: order:direction | filter: query">
+          <fieldset class="info">
+            <p>Name: <b>{{checkin.firstname}} {{checkin.lastname}}</b></p>
+            <p>Check-in Time: <b>{{checkin.date | date: "MMM d,yy h:mm a"}}</b></p>
 
-          <div ng-show="allowedUser">
-            <button ng-click="deleteCheckIn(checkin.$id)"><span>Delete this check in</span></button>
-            <button ng-click="addNote(checkin)"><span>Add a note</span></button>
-          </div>
+            <div ng-show="allowedUser">
+              <button ng-click="deleteCheckIn(checkin.$id)"><span>Delete this check in</span></button>
+              <button ng-click="addNote(checkin)"><span>Add a note</span></button>
+            </div>
 
-          <div ng-show="checkin.show">
-            <form name="noteform" ng-submit="publishNote(checkin)" novalidate>
+            <div ng-show="checkin.show">
+              <form name="noteform" ng-submit="publishNote(checkin)" novalidate>
 
               <input type="text" name="content" placeholder="Content" ng-required="true" ng-model="checkin.content">
 
               <button type="submit" ng-disabled="noteform.$invalid">Add</button>
-            </form>
+              </form>
 
-            <div>
-              <ul>
-                <li ng-repeat="(key, note) in checkin.notes">
-                  <span>{{note.content}}</span>
-                  <span>{{note.id}}</span>
-                  <button ng-click="deleteNote(checkin, key)"><span>Delete this Note</span></button>
-                </li>
-              </ul>
+              <div>
+                <ul>
+                  <li ng-repeat="(key, note) in checkin.notes">
+                    <span>{{note.content}}</span>
+                    <span>{{note.id}}</span>
+                    <button ng-click="deleteNote(checkin, key)"><span>Delete this Note</span></button>
+                  </li>
+                </ul>
+              </div>
+
             </div>
-
-          </div>
-        </fieldset>
+            </fieldset>
         </div>
       </li>
     </ul>
